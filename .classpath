@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="2-HolaUsuario/src"/>
+	<classpathentry kind="src" path="3-ParImpar/src"/>
+	<classpathentry kind="src" path="4-MayorDeEdad/src"/>
+	<classpathentry kind="src" path="5-MenuSwitch/src"/>
+	<classpathentry kind="src" path="6-NumerosAleatorios/src"/>
+	<classpathentry kind="src" path="7-SumaNumeros/src"/>
+	<classpathentry kind="src" path="HolaMundo/src"/>
+	<classpathentry kind="output" path="2-HolaUsuario/bin"/>
+</classpath>
