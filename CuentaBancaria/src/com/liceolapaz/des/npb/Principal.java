@@ -21,22 +21,24 @@ public class Principal {
 					menuSecundario();
 					int opcion2 = elegirOpcion();
 					switch(opcion2) {
-						default: {
+						default: 
 							System.out.println("No es una opción válida.");
-							break;
-						}
+						break;
 						//Pedir saldo inicial de la cuenta
 						//Cuenta normal permite tener saldo negativo, la premiun si
-						case 1: {	
+						case 1: 	
 							cuenta = leerSaldo();
 							tipo_cuenta = "normal";
-							break;
-						}
-						case 2: {
+						break;
+			
+						case 2: 
 							cuenta = leerSaldo();
 							tipo_cuenta = "premium";
-							break;
-						}
+						break;
+						
+						case 0:
+							
+						break;
 					}
 				break;
 
