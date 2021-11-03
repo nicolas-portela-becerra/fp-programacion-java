@@ -5,8 +5,7 @@ import java.util.Scanner;
 public class Principal {
 
 	public static void main(String[] args) {
-		int i = 1;
-		while (i!= 0) {
+		while (true) {
 			//Mostrar menú
 			mostrarMenu();
 			//Elegir la opción
@@ -22,36 +21,36 @@ public class Principal {
 				}
 				case 1: {
 					//Introducir los operandos
-					int operando1 = leerOperando1();
-					int operando2 = leerOperando2();
-					int resultado = operando1 + operando2;
+					double operando1 = leerOperando1();
+					double operando2 = leerOperando2();
+					double resultado = operando1 + operando2;
 					//Mostrar el resultado de la operación
 					System.out.println("El resultado de la suma es: " + resultado);
 					break;
 				}
 				case 2: {
 					//Introducir los operandos
-					int operando1 = leerOperando1();
-					int operando2 = leerOperando2();
-					int resultado = operando1 - operando2;
+					double operando1 = leerOperando1();
+					double operando2 = leerOperando2();
+					double resultado = operando1 - operando2;
 					//Mostrar el resultado de la operación
 					System.out.println("El resultado de la resta es: " + resultado);
 					break;
 				}
 				case 3: {
 					//Introducir los operandos
-					int operando1 = leerOperando1();
-					int operando2 = leerOperando2();
-					int resultado = operando1 * operando2;
+					double operando1 = leerOperando1();
+					double operando2 = leerOperando2();
+					double resultado = operando1 * operando2;
 					//Mostrar el resultado de la operación
 					System.out.println("El resultado del producto es: " + resultado);
 					break;
 				}
 				case 4: {
 					//Introducir los operandos
-					int operando1 = leerOperando1();
-					int operando2 = leerOperando2();
-					int resultado = operando1 / operando2;
+					double operando1 = leerOperando1();
+					double operando2 = leerOperando2();
+					double resultado = operando1 / operando2;
 					//Mostrar el resultado de la operación
 					System.out.println("El resultado de la división es: " + resultado);
 					break;
@@ -60,19 +59,14 @@ public class Principal {
 		}
 		}
 		
-	
-	private static int leer() {
-		Scanner escaner = new Scanner(System.in);
-		return escaner.nextInt();
-	}
-	
-	private static int leerOperando2() {
+
+	private static double leerOperando2() {
 		System.out.print("Introduce el segundo operando: ");
 		Scanner escaner = new Scanner(System.in);
 		return escaner.nextInt();
 	}
 	
-	private static int leerOperando1() {
+	private static double leerOperando1() {
 		System.out.print("Introduce el primer operando: ");
 		Scanner escaner = new Scanner(System.in);
 		return escaner.nextInt();

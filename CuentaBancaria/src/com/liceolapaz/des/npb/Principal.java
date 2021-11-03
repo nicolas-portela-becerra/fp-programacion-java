@@ -52,10 +52,11 @@ public class Principal {
 					}
 					else {
 						int ingreso = 0;
-						while (ingreso <= 0) {
+						while (ingreso < 0) {
 							if (ingreso < 0) {
 								System.out.println("La cantidad no puede ser negativa.");
 								ingreso = leerCantidad();
+								continue;
 							}
 							else {
 								ingreso = leerCantidad();
