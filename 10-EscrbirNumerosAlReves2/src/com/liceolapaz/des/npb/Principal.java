@@ -10,12 +10,13 @@ public class Principal {
 		//Asegurarse de que son solo positivos
 		//Leer y guardar los 10 numeros
 		//Mostrar los numeros en orden inverso
-		int numero [] = new int [10];
-		for(int i = 0; i < 10; i++) {
-			numero[i] = pedirNumeros();
-			while(numero[i] < 0) {
+		int numero [] = new int [11];
+		numero[10] = 0;
+		for(numero[10] = 0; numero[10] <= (numero.length - 2); numero[10]++) {
+			numero[numero[10]] = pedirNumeros();
+			while(numero[numero[10]] < 0) {
 				System.out.println("Introduce un numero entero y positivo");
-				numero[i] = pedirNumeros();
+				numero[numero[10]] = pedirNumeros();
 			}		
 		} 
 		mostrarNumeros(numero);
@@ -23,16 +24,13 @@ public class Principal {
 	}
 
 	private static void mostrarNumeros(int[] numero) {
-		for(int i = numero.length-1; i >= 0; i--){
-			System.out.print(numero[i] + " ");
+		for(numero[10] = (numero.length-2) ; numero[10] >= 0; numero[10]--){
+			System.out.print(numero[numero[10]] + " ");
 		}
-		
 	}
 
 	private static int pedirNumeros() {
-		Scanner escaner =  new Scanner (System.in);
 		System.out.print("Introduce un número: ");
-		return escaner.nextInt();	
+		return new Scanner (System.in).nextInt();	
 	}
-
 }
