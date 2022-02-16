@@ -66,46 +66,58 @@ public class Matriz {
 	//Multiplicar matriz con un numero
 	public Matriz multiplicarEscalar(double escalar) {
 		Matriz resultado;
-		double help [] [] = new double [matriz.length][matriz[0].length];
+		double temp [] [] = new double [matriz.length][matriz[0].length];
 		
 		for(int i = 0; i < matriz.length; i++) {
 			for(int j = 0; j < matriz[i].length; j++) {
-				help [i][j] = this.matriz[i][j] * escalar;
+				temp [i][j] = this.matriz[i][j] * escalar;
 			}
 		}
-		resultado = new Matriz(help);
-		
-		
+		resultado = new Matriz(temp);
 		return resultado;
 	}
 	
-	//Hacer submatrices
-	public Matriz SubMatriz(Matriz matriz) {
-		
-		
-		return null;
-	}
-	
-	//Hacer el determinante
-	public double Determinante() {
-		if(this.matriz.length == 1) {
-			return this.matriz[0][0];
-		}
-		else if(this.matriz.length == 2) {
-			return (this.matriz[0][0] * this.matriz[1][1]) - (this.matriz[0][1] * this.matriz[1][0]);
-		}
-		else if (this.matriz.length == 3) {
-			double mitad1, mitad2, resultado;
-			
-			mitad1 = (this.matriz[0][0] * this.matriz[1][1] * this.matriz[2][2]) + (this.matriz[0][2] * this.matriz[1][0] * this.matriz[2][1]) + (this.matriz[0][1] * this.matriz[1][2] * this.matriz[2][0]);
-			mitad2 = (this.matriz[0][2] * this.matriz[1][1] * this.matriz[2][0]) + (this.matriz[0][0] * this.matriz[1][2] * this.matriz[2][1]) + (this.matriz[0][1] * this.matriz[1][0] * this.matriz[2][2]);
-			
-			resultado = mitad1 - mitad2;
-			return resultado;
-		}
-		
-		return 0;
-	}
+	//Determinante
+    public double Determinante() {
+    	 
+        double det = 0;
+        double matriz [][] = this.matriz;
+        if (matriz.length == 1) {
+            return matriz[0][0];
+ 
+        } else {
+            for (int j = 0; j < matriz.length; j++) {
+                det = det + matriz[0][j] * Cofactor(matriz, 0, j);
+            }
+        }
+ 
+        return det;
+    }
+    
+    //Subamtricez para el determinante
+    public double Cofactor(double matriz[][], int fila, int columna) {
+ 
+        double submatriz[][];
+        int n = matriz.length - 1;
+ 
+        submatriz = new double[n][n];
+        int x = 0;
+        int y = 0;
+        for (int i = 0; i < matriz.length; i++) {
+            for (int j = 0; j < matriz.length; j++) {
+                if (i != fila && j != columna) {
+                    submatriz[x][y] = matriz[i][j];
+                    y++;
+                    if (y >= n) {
+                        x++;
+                        y = 0;
+                    }
+                }
+            }
+        }
+        Matriz matriz_submatriz = new Matriz(submatriz);
+        return Math.pow(-1.0, fila + columna) * matriz_submatriz.Determinante();
+    }
 	
 	//Hacer la traspuesta
 	public Matriz Traspuesta() {
