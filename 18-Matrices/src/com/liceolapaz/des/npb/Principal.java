@@ -37,8 +37,6 @@ public class Principal {
 					
 					System.out.println("Resultado");
 					System.out.println(resultado_suma.toString());
-					
-					
 				break;
 				
 				case 2:
@@ -57,9 +55,6 @@ public class Principal {
 						//Hacer que la matriz sea un objeto de tipo Matriz
 						matriz = new Matriz(matriz_multiplicacion);
 						
-//						System.out.println("Matriz");
-//						System.out.println(matriz.toString()); 
-						
 						//Pedir filas de la matriz operando
 						int filas_operando = pedirFilasOperando();
 						//Pedir columnas de la matriz operando
@@ -70,9 +65,6 @@ public class Principal {
 						hacerOperando(operando_multiplicacion, filas_operando, columnas_operando);
 						//Hacer que operando sea de un obajeto de tipo Matriz
 						operando = new Matriz(operando_multiplicacion);
-						
-//						System.out.println("Operando");
-//						System.out.println(operando.toString());
 						
 						//Utilizar el metodo multiplicarMatriz sobre un objeto de tipo Matriz
 						Matriz resultado_multiplicacion;
@@ -89,9 +81,6 @@ public class Principal {
 						double matriz_multiplicacion [] [] = new double [filas_matriz] [columnas_matriz];
 						hacerMatriz(matriz_multiplicacion, filas_matriz, columnas_matriz);
 						matriz = new Matriz(matriz_multiplicacion);
-						
-//						System.out.println("Matriz");
-//						System.out.println(matriz.toString());
 						
 						//Pedir el numero por el que vamosa multiplicar la matriz
 						double escalar = pedirEscalar();
@@ -130,7 +119,28 @@ public class Principal {
 				break;
 				
 				case 4:
+					//Hacer la matriz
+					do {
+						//Pedir las diemsiones de la matriz hasta que sean iguales, porque solo se puede hallar la inversa si hay determiante
+						filas_matriz = pedirFilasMatriz();
+						columnas_matriz = pedirColumnasMatriz();
+						if(filas_matriz != columnas_matriz) {
+							System.out.println("Filas columnas han de tener el mismo valor.");
+						}
+					}
+					while(filas_matriz != columnas_matriz);
 					
+					double matriz_inversa [] [] = new double [filas_matriz][columnas_matriz];
+					hacerMatriz(matriz_inversa, filas_matriz, columnas_matriz);
+					Matriz matrizInversa = new Matriz(matriz_inversa);
+					
+					if(matrizInversa.Determinante() == 0) {
+						System.out.println("No se pudo hacer la inversa de la matriz porque el determinante es 0.");
+					}
+					else {
+						Matriz resultado_inversa = matrizInversa.invertirMatriz();
+						System.out.println("La inversa es:\n" + resultado_inversa.toString()); 
+					}
 				break;
 				
 				case 5:
@@ -151,9 +161,6 @@ public class Principal {
 				break;
 			}
 		}
-		
-
-
 	}
 
 	private static double pedirEscalar() {
@@ -171,6 +178,24 @@ public class Principal {
 			}
 		}
 		return operando_double;
+	}
+	
+	private static double [] [] matrizSplit(int filas_matriz, int columnas_matriz){
+		Scanner sc = new Scanner(System.in);
+		
+		double [] [] array = new double [columnas_matriz][filas_matriz];
+		
+			for(int i = 0; i < filas_matriz; i++) {
+				System.out.print("Escribe los numeros de la fila " + i + " separados por un espacio en blanco: ");
+				String fila = sc.nextLine();
+				
+				String [] aux = fila.split(" ");
+				
+				for(int j = 0; j < columnas_matriz; j++) {
+					array[i][j] = Double.parseDouble(aux[j]);
+				}
+			}
+		return array;
 	}
 
 	private static double[][] hacerMatriz(double[][] matriz, int filas_matriz, int columnas_matriz) {
