@@ -1,0 +1,11 @@
+num_depto;nombre;nombre_corto;planta;cif_director;correo_e
+1;Recursos Humanos;rrhh;1;52195278-Y;rrhh@empresa.es
+2;Analisis;analisis;2;52792665-D;analisis@empresa.es
+3;Desarrollo;desarrollo;2;52887030-Y;desarrollo@empresa.es
+4;Mercadotecnia;market;1;38405468-C;mercadotecnia@empresa.es
+5;Mantenimiento;mantenimiento;0;52865785-R;matenimiento@empresa.es
+6;Contabilidad;contabilidad;1;40200103-F;contabilidad@empresa.es
+7;Atencion al cliente;attcliente;0;55445830-E;attcliente@empresa.es
+8;Ventas;ventas;3;54306675-A;ventas@empresa.es
+9;Editorial;editorial;3;36245355-A;editorial@empresa.es
+10;Comunicacion;comunicacion;3;54952748-C;comunicacion@empresa.es

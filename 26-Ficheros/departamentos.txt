@@ -1,0 +1,80 @@
+=========================
+Numero de departamento: 1
+=========================
+Nombre de departamento: Recursos Humanos
+Abreviatura del departamento: rrhh
+Planta del departamento: 1
+Cif del director del departamento: 52195278-Y
+Correo electronico del departamento: rrhh@empresa.es
+=========================
+Numero de departamento: 2
+=========================
+Nombre de departamento: Analisis
+Abreviatura del departamento: analisis
+Planta del departamento: 2
+Cif del director del departamento: 52792665-D
+Correo electronico del departamento: analisis@empresa.es
+=========================
+Numero de departamento: 3
+=========================
+Nombre de departamento: Desarrollo
+Abreviatura del departamento: desarrollo
+Planta del departamento: 2
+Cif del director del departamento: 52887030-Y
+Correo electronico del departamento: desarrollo@empresa.es
+=========================
+Numero de departamento: 4
+=========================
+Nombre de departamento: Mercadotecnia
+Abreviatura del departamento: market
+Planta del departamento: 1
+Cif del director del departamento: 38405468-C
+Correo electronico del departamento: mercadotecnia@empresa.es
+=========================
+Numero de departamento: 5
+=========================
+Nombre de departamento: Mantenimiento
+Abreviatura del departamento: mantenimiento
+Planta del departamento: 0
+Cif del director del departamento: 52865785-R
+Correo electronico del departamento: matenimiento@empresa.es
+=========================
+Numero de departamento: 6
+=========================
+Nombre de departamento: Contabilidad
+Abreviatura del departamento: contabilidad
+Planta del departamento: 1
+Cif del director del departamento: 40200103-F
+Correo electronico del departamento: contabilidad@empresa.es
+=========================
+Numero de departamento: 7
+=========================
+Nombre de departamento: Atencion al cliente
+Abreviatura del departamento: attcliente
+Planta del departamento: 0
+Cif del director del departamento: 55445830-E
+Correo electronico del departamento: attcliente@empresa.es
+=========================
+Numero de departamento: 8
+=========================
+Nombre de departamento: Ventas
+Abreviatura del departamento: ventas
+Planta del departamento: 3
+Cif del director del departamento: 54306675-A
+Correo electronico del departamento: ventas@empresa.es
+=========================
+Numero de departamento: 9
+=========================
+Nombre de departamento: Editorial
+Abreviatura del departamento: editorial
+Planta del departamento: 3
+Cif del director del departamento: 36245355-A
+Correo electronico del departamento: editorial@empresa.es
+=========================
+Numero de departamento: 10
+=========================
+Nombre de departamento: Comunicacion
+Abreviatura del departamento: comunicacion
+Planta del departamento: 3
+Cif del director del departamento: 54952748-C
+Correo electronico del departamento: comunicacion@empresa.es
